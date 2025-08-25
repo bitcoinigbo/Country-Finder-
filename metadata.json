@@ -1,0 +1,5 @@
+{
+  "name": "Travel Information App",
+  "description": "A simple and elegant web application to browse and search for information about countries around the world, using the REST Countries API.",
+  "requestFramePermissions": []
+}
