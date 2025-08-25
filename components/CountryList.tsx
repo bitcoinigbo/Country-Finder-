@@ -1,6 +1,7 @@
+
 import React from 'react';
-import type { Country } from '../types';
-import CountryCard from './CountryCard';
+import type { Country } from '../types.ts';
+import CountryCard from './CountryCard.tsx';
 
 interface CountryListProps {
   countries: Country[];

@@ -1,5 +1,6 @@
+
 import React from 'react';
-import type { Country, Currency } from '../types';
+import type { Country, Currency } from '../types.ts';
 
 interface CountryCardProps {
   country: Country;

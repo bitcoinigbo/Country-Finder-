@@ -1,5 +1,5 @@
 
-import type { Country } from '../types';
+import type { Country } from '../types.ts';
 
 const API_BASE_URL = 'https://restcountries.com/v3.1';
 const ALL_COUNTRIES_FIELDS = 'name,flags,capital,population,region,subregion,languages,currencies,cca3';

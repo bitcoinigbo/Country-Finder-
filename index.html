@@ -1,12 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Country Finder</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Add Babel to transpile JSX/TSX in the browser for static hosting compatibility -->
+    <script src="https://unpkg.com/@babel/standalone@7.24.7/babel.min.js"></script>
     <style>
       /* Custom scrollbar for a better look */
       ::-webkit-scrollbar {
@@ -36,6 +37,11 @@
 </head>
   <body class="bg-gray-900">
     <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
+    <!--
+      Change script type to "text/babel" and add presets for React and TypeScript.
+      This allows Babel to transpile the .tsx file into plain JavaScript that the browser can understand.
+      The data-type="module" attribute ensures that ES modules (import/export) are handled correctly.
+    -->
+    <script type="text/babel" data-type="module" data-presets="react,typescript" src="./index.tsx"></script>
   </body>
 </html>

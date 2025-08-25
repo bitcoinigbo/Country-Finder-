@@ -1,6 +1,7 @@
+
 import React, { useEffect } from 'react';
-import type { Country, Currency } from '../types';
-import CountryDetails from './CountryDetails';
+import type { Country, Currency } from '../types.ts';
+import CountryDetails from './CountryDetails.tsx';
 
 interface CountryModalProps {
     country: Country;

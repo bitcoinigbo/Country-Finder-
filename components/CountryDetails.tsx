@@ -1,6 +1,7 @@
+
 import React, { useState, useEffect } from 'react';
-import type { Country, TouristInfo } from '../types';
-import { fetchTouristInfo } from '../services/geminiService';
+import type { Country, TouristInfo } from '../types.ts';
+import { fetchTouristInfo } from '../services/geminiService.ts';
 
 interface CountryDetailsProps {
   country: Country;
@@ -43,7 +44,6 @@ const CountryDetails: React.FC<CountryDetailsProps> = ({ country }) => {
 
     useEffect(() => {
         const getInfo = async () => {
-            if (touristInfo) return; // Don't refetch if we already have the data
             setIsLoading(true);
             setError(null);
             try {
@@ -60,7 +60,7 @@ const CountryDetails: React.FC<CountryDetailsProps> = ({ country }) => {
             }
         };
         getInfo();
-    }, [country, touristInfo]);
+    }, [country]);
 
     if (isLoading) {
         return <SkeletonLoader />;

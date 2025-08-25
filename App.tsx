@@ -1,11 +1,12 @@
+
 import React, { useState, useEffect, useMemo } from 'react';
-import type { Country } from './types';
-import { fetchAllCountries } from './services/countryService';
-import SearchBar from './components/SearchBar';
-import CountryList from './components/CountryList';
-import LoadingSpinner from './components/LoadingSpinner';
-import ErrorMessage from './components/ErrorMessage';
-import CountryModal from './components/CountryModal';
+import type { Country } from './types.ts';
+import { fetchAllCountries } from './services/countryService.ts';
+import SearchBar from './components/SearchBar.tsx';
+import CountryList from './components/CountryList.tsx';
+import LoadingSpinner from './components/LoadingSpinner.tsx';
+import ErrorMessage from './components/ErrorMessage.tsx';
+import CountryModal from './components/CountryModal.tsx';
 
 const App: React.FC = () => {
   const [allCountries, setAllCountries] = useState<Country[]>([]);
